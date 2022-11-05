@@ -14,8 +14,8 @@
       <legend >Product</legend>
         <input type="checkbox" name="Drinks[]" id="drnksCoke" value = "Coke" > <label for="drnksCoke">Coke - ₱15</label><br>
         <input type="checkbox" name="Drinks[]" id="drinksSprite" value = "Sprite"> <label for = "drinksSprite">Sprite - ₱20</label><br>
-        <input type="checkbox" name="Drinks[]" id="drnksRoyal" value = "Royal"> <label for = "drnksRoyal">Royal - ₱20</label><br>
-        <input type="checkbox" name="Drinks[]" id="drnksPepsi" value = "Pepsi"> <label for = "sodasPepsi">Pepsi - ₱15</label><br>
+        <input type="checkbox" name="Drinks[]" id="drnksRoyal" value = "Royal"> <label for = "drnksRoyal">Royal - ₱20</label><br>  
+        <input type="checkbox" name="Drinks[]" id="drnksPepsi" value = "Pepsi"> <label for = "drnksPepsi">Pepsi - ₱15</label><br>
         <input type="checkbox" name="Drinks[]" id="drnksMountainDew" value = "Mountaindew"> <label for = "drnksMountainDew">Mountain Dew - ₱20</label><br>
   
     </fieldset>
@@ -35,29 +35,29 @@
 </form>
 
 <?php
-    error_reporting(0);
-      if(isset($_POST['CheckOutbtn']) &&
-        isset($_POST['Drinks']) && 
+    error_reporting(0);  // disable error reporting
+      if(isset($_POST['CheckOutbtn']) &&     //isset Check kung may changes na nangyayari sa button
+        isset($_POST['Drinks']) &&        
         isset($_POST['size']) && 
         isset($_POST['QtyDrnks'])){
         echo '<hr>';
         echo '<b>Purchase Summary:</b> <br>';
 
         $arrDrnks = $_POST['Drinks'];
-        $arrSize = $_POST['size'];
+        $arrSize = $_POST['size'];        //variable para sa hahawak na input value
         $DrinksQty = $_POST['QtyDrnks'];
 
       foreach($arrDrnks as $key => $DrnksValue){
-      foreach($arrSize as $key => $SizeValue){
+      foreach($arrSize as $key => $SizeValue){       
       if (($DrnksValue == "Coke")&&($SizeValue == "Regular")){
             $coke = 15 * $DrinksQty;
             $QtyCoke = $DrinksQty;
 
-      if($DrinksQty > 1){
+      if($DrinksQty > 1){     //If statement pag >1 na yung na order mo
            echo '<li> ',$DrinksQty,' ','pieces of ',$SizeValue,' ',$DrnksValue,' amounting to ',' ₱ ',$coke,'</li> <br>';
          }
       else
-         {
+         {     //pag 1 lang or singular
            echo '<li> ',$DrinksQty,' ','piece of ',$SizeValue,' ',$DrnksValue,' amounting to ',' ₱ ',$coke,'</li> <br>';
          }      
          }
@@ -111,7 +111,7 @@
          }
  
       if (($DrnksValue == "Coke")&&($SizeValue == "UpSize")){
-            $coke = 20*$DrinksQty;
+            $coke = 20 * $DrinksQty;
             $QtyCoke = $DrinksQty;
       if($DrinksQty > 1){
             echo '<li> ',$DrinksQty,' ','pieces of ',$SizeValue,' ',$DrnksValue,' amounting to ',' ₱ ',$coke,'</li> <br>';
@@ -123,7 +123,7 @@
          }
 
       if (($DrnksValue == "Sprite")&&($SizeValue == "UpSize")){
-            $sprite =25*$DrinksQty; 
+            $sprite =25 * $DrinksQty; 
             $QtySprite = $DrinksQty;
       if($DrinksQty > 1){
             echo '<li> ',$DrinksQty,' ','pieces of ',$SizeValue,' ',$DrnksValue,' amounting to ',' ₱ ',$sprite,'</li> <br>';
@@ -134,7 +134,7 @@
          }                    
          }
       if (($DrnksValue == "Royal")&&($SizeValue == "UpSize")){
-            $royal = 25*$DrinksQty; 
+            $royal = 25 * $DrinksQty; 
             $QtyRoyal = $DrinksQty;
       if($DrinksQty > 1){
             echo '<li> ',$DrinksQty,' ','pieces of ',$SizeValue,' ',$DrnksValue,' amounting to ',' ₱ ',$royal,'</li> <br>';
@@ -231,7 +231,7 @@
          } 
         
 
-        $TotalAmounnt = $coke + $sprite + $royal + $pepsi + $MountainDew;
+        $TotalAmounnt = $coke + $sprite + $royal + $pepsi + $MountainDew;  
         $TotalDrinks = $QtyCoke + $QtySprite + $QtyRoyal + $QtyPepsi +  $QtyMountaindew;
         echo '<b>Total Number of Items: </b>',$TotalAmounnt,'<br>';
         echo '<b>Total Amount: </b>',$TotalDrinks,'<br>';

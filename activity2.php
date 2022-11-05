@@ -20,13 +20,13 @@
         <?php
             $phtSize;
 
-            if(isset($_POST['btnProcess'])){
-                $phtSize = $_POST['size'];
-                $borderColor = $_POST['brdrcolor'];
+            if(isset($_POST['btnProcess'])){        //iprocess nya yung nangyari sa button
+                $phtSize = $_POST['size'];            //select size
+                $borderColor = $_POST['brdrcolor']; //select color
             }
             else{
-                $phtSize= '60';
-                $borderColor='#000000';
+                $phtSize= '60';         // Normal size 
+                $borderColor='#000000';   //Normal color border
             }
             
             echo '<br>';
