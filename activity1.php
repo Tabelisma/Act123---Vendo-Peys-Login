@@ -43,10 +43,12 @@
         echo '<hr>';
         echo '<b>Purchase Summary:</b> <br>';
 
+        //variable para sa hahawak na input value
         $arrDrnks = $_POST['Drinks'];
-        $arrSize = $_POST['size'];        //variable para sa hahawak na input value
+        $arrSize = $_POST['size'];       
         $DrinksQty = $_POST['QtyDrnks'];
 
+        //Loop for each
       foreach($arrDrnks as $key => $DrnksValue){
       foreach($arrSize as $key => $SizeValue){       
       if (($DrnksValue == "Coke")&&($SizeValue == "Regular")){

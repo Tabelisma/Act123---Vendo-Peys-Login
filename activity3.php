@@ -97,21 +97,21 @@
             }
             
     ?>
-        <div class="container">
+        <div class="container w-25">
             <div class="row">
                 <div class="col-12 mt-5 text-center">
-                <img src="blankDPinLogin.png" alt="Blank" class="profile-img-card rounded-circle w-50" >              
-                <p id="profile-name" class="profile-name-card w-75"></p>
-                <form class="form-signin w-75" method="post">
+                <img src="blankDPinLogin.png" alt="Blank" class="profile-img-card rounded-circle w-25" >              
+                <p id="profile-name" class="profile-name-card w-50"></p>
                 <div class="form-row align-items-center">
-                <div class="col-auto my-1">
-                <select class="form-control d-flex text-center w-75" id="UType" name ="UserType[]">
+                <div class="my-1 w-auto">
+                <form class="form-signin form-group" method="post">
+                <select class="form-control d-flex " id="UType" name ="UserType[]">
                 <option value="Admin">Admin</option>
                 <option value="CntMngr">Content Manager</option>
                 <option value="SystemUs">System User</option><br>
-                <input type="text" name="Username" id="username" class="form-control w-75" placeholder="User Name" required autofocus>
-                <input type="password" name="Password"  id="password" class="form-control w-75" placeholder="Password" required>
-                <button class="btn btn-lg btn-info btn-block btn-signin form-control w-75" type="submit" name="SgnInBtn">Sign in</button>
+                <input type="text" name="Username" id="username" class="form-control " placeholder="User Name" required autofocus>
+                <input type="password" name="Password"  id="password" class="form-control " placeholder="Password" required>
+                <button class="btn btn-lg btn-info btn-block btn-signin form-control" type="submit" name="SgnInBtn">Sign in</button>
                 </form>
                 </select>
                 </div>
