@@ -25,7 +25,7 @@
                 $borderColor = $_POST['brdrcolor']; //select color
             }
             else{
-                $phtSize= '60';         // Normal size 
+                $phtSize= '60';         // Normal sizes
                 $borderColor='#000000';   //Normal color border
             }
             

@@ -43,7 +43,7 @@
         echo '<hr>';
         echo '<b>Purchase Summary:</b> <br>';
 
-        //variable para sa hahawak na input value
+        //variable para sa hahawak na input value!
         $arrDrnks = $_POST['Drinks'];
         $arrSize = $_POST['size'];       
         $DrinksQty = $_POST['QtyDrnks'];

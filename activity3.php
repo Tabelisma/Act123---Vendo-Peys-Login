@@ -12,7 +12,7 @@
 <body>
     <?php
         
-            if(isset($_POST['SgnInBtn']) && isset($_POST['UserType'])){      //Post pag yung url mo is gusto mo ng privacy para hindi lumabas sa url
+            if(isset($_POST['SgnInBtn']) && isset($_POST['UserType'])){      //Post pag yung url mo is gusto mo ng privacy para hindi lumabas sa url!
                 $Arrtype = $_POST['UserType'];
 
             foreach ($Arrtype as $key => $typeValue){
